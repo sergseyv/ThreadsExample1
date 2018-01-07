@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class FactorMap {
 
-    public static List <Map<Integer, Integer>> getMaps(int valStart, int valFinish) {
+    public static List <Map<Integer, Integer>> getMaps(int valStart, int valFinish, int valStep) {
         BigInteger factorResult1, factorResult2;
         final BigInteger[] factorOdd = new BigInteger[1];
         final BigInteger[] factorEven = new BigInteger[1];
@@ -16,7 +16,7 @@ public class FactorMap {
         Map<Integer, Integer> times2 = new HashMap<>();
 
 
-        for (number[0] = valStart; number[0] < valFinish; number[0]++) {
+        for ( number[0] = valStart; number[0] < valFinish; number[0] += valStep ) {
 
             Thread tr1 = new Thread(() -> {
                 if (number[0] % 2 == 0) {
