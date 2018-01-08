@@ -1,4 +1,4 @@
-package com.sseyvach.ThreadsEx1.model;
+package com.sseyvach.ThreadsEx1.math;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
