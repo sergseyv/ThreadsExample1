@@ -1,7 +1,7 @@
 package com.sseyvach.ThreadsEx1.ctrl;
 
 import com.sseyvach.ThreadsEx1.model.ChartData;
-import com.sseyvach.ThreadsEx1.math.FactorMap;
+import com.sseyvach.ThreadsEx1.factor.FactorMap;
 import com.sseyvach.ThreadsEx1.model.Inits;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

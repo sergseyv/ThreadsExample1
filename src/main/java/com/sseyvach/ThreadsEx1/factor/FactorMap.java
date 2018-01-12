@@ -3,7 +3,7 @@
 *
 * */
 
-package com.sseyvach.ThreadsEx1.math;
+package com.sseyvach.ThreadsEx1.factor;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
