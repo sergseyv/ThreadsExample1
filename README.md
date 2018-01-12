@@ -1,16 +1,17 @@
 # ThreadsEx1
 
-This program demonstrates an example of a simple multithreading, Spring web application with Google Charts.
+This program demonstrates an example of a simple multithreading and Spring MVC application with Google Charts.
+
+Charts shows the difference in the speed of calculating factorial by one and two threads.
 
 __Used:__
-+ Java (method references, since JDK 8)
++ Java (threads, lambdas, collections)
 + IntelliJ IDEA / Maven
 + Apache Tomcat
 + Spring MVC
-+ Validating Form Input
 + JSP / JSTL
-+ MySQL
-+ Hibernate 5 (HQL joins of unassociated entities, since Hibernate 5.1)
++ Google Charts
+
 
 
 It was written for educational purposes.  

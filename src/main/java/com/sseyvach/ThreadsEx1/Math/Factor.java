@@ -1,8 +1,12 @@
 package com.sseyvach.ThreadsEx1.math;
 import java.math.BigInteger;
 
+    /*
+    * Обычный факториал, нерекурсивный.
+    * Рекурсивный падает по StackOverflowError при больших значениях.
+    *
+    * */
 public class Factor {
-
     static BigInteger factorial(int num) {
         BigInteger result = BigInteger.ONE;
         while (num > 0) {
@@ -11,6 +15,11 @@ public class Factor {
         return result;
     }
 
+    /*
+    * Половина факториала, для одного из двух потоков.
+    * Перемножает только нечетные числа.
+    *
+    * */
     static BigInteger factorOdd (int num){
         BigInteger result = BigInteger.ONE;
         while (num > 1) {
@@ -21,6 +30,11 @@ public class Factor {
 
     }
 
+    /*
+   * Половина факториала, для одного из двух потоков.
+   * Перемножает только четные числа.
+   *
+   * */
     static BigInteger factorEven (int num){
         BigInteger result = BigInteger.ONE;
         while (num > 0) {
@@ -28,7 +42,6 @@ public class Factor {
             num -= 2;
         }
         return result;
-
     }
 
 }

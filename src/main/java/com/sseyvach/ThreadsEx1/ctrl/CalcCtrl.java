@@ -7,33 +7,34 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+
 @Controller
 public class CalcCtrl {
+
+    // отработка нажатия кнопки "Calculate!"
     @RequestMapping(value = "calculate", method = RequestMethod.POST)
     public String CalcChart(Inits init, Model model) {
 
+        // получаем список хешмапов с нужными значениями исходных чисел
+        // и временем просчета его факториалов
         List<Map<Integer, Integer>> listMaps = FactorMap.getMaps(init.getValStart(), init.getValFinish(), init.getValStep());
-        Map<Integer, Integer> map1thread = listMaps.get(0);
-        Map<Integer, Integer> map2thread = listMaps.get(1);
 
-        List<ChartData> dataList = new ArrayList<>();
-
-        map1thread.forEach((k, v1) -> {
-            dataList.add(new ChartData(k, v1, map2thread.get(k)));
+        // перепаковываем значения из списка хешмапов в список объектов ChartData,
+        // для удобной отправки в JSP
+        List<ChartData> chartDataList = new ArrayList<>();
+        listMaps.get(0).forEach((key, value) -> {
+            chartDataList.add(new ChartData(key, value, listMaps.get(1).get(key)));
         });
 
+        // и отправляем
         model.addAttribute("valInit", init);
-        model.addAttribute("chartData", dataList);
-
-
+        model.addAttribute("chartData", chartDataList);
         return "index";
     }
-
 }
 
 

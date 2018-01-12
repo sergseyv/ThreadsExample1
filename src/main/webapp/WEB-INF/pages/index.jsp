@@ -40,32 +40,36 @@
 
 <body>
 
-<table width=50% border="0" cellpadding="10">
+<table width=1000px border="1" cellpadding="10" bgcolor="#e0ffff">
     <tr>
         <td width="50%" valign="top">
             Графики показывают разницу в скорости вычисления факториала
             одним и двумя потоками.
+            <p><b>Внимание!</b><br>
+            Вычисление слишком больших факториалов может занять некоторое время!
         </td>
         <td valign="top">
             The graphs shows the difference in the speed of calculating factorial
-            whis one and two threads.
+            by one and two threads.
+            <p><b>Warning:</b><br>
+            Calculating too large factorials may take some time!
         </td>
     </tr>
     <tr>
-        <td colspan="2" align="center">
+        <td colspan="2" align="center" valign="bottom">
             <form:form method="POST" action="calculate" modelAttribute="valInit">
                 <table>
                     <tr>
-                        <td>Start value: </td>
+                        <td><samp><b>Start value: </b></samp></td>
                         <td><form:input path="valStart"/></td>
                     </tr>
                     <tr>
-                        <td>Finish value: </td>
+                        <td><samp><b>Finish value: </b></samp></td>
                         <td><form:input path="valFinish"/></td>
                     </tr>
 
                     <tr>
-                        <td>Step: </td>
+                        <td><samp><b>Step: </b></samp></td>
                         <td><form:input path="valStep"/></td>
                     </tr>
                     <tr align="right">
@@ -74,24 +78,11 @@
                 </table>
             </form:form>
 
-
-
-
-
         </td>
     </tr>
 </table>
 
-
-
-
-
-
-
-
-
-
-<div class="chart" id="curve_chart" style="width: 1500px; height: 500px"></div>
+<div class="chart" id="curve_chart" style="width: 1000px; height: 500px"></div>
 
 </body>
 </html>
