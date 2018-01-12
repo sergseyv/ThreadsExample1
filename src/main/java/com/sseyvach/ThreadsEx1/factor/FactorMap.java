@@ -95,7 +95,7 @@ public class FactorMap {
         // вывод значений факториала в консоль, потому что могу)).
         System.out.println("=====================================================");
         System.out.println("One thread result: " + factorResult1);
-        System.out.println("Two thread result: " + factorResult1);
+        System.out.println("Two thread result: " + factorResult2);
         System.out.println("=====================================================");
 
         // пакуем хешмапы в список и возвращаем
